@@ -1,0 +1,234 @@
+.filters {
+  padding: 40px 0;
+
+  @media (max-width: 1050px) {
+    padding: 20px 0;
+  }
+
+  & .uk-form {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    & .filters-checkbox {
+      display: flex;
+      justify-content: space-between;
+
+      & .uk-form-row {
+        margin-right: 48px;
+
+        &:last-child {
+          margin-right: 0;
+        }
+
+        & label {
+          display: block;
+          font-weight: 500;
+          font-size: 16px;
+          line-height: 19px;
+          color: #6E6E6E;
+
+          & .uk-checkbox {
+            margin-right: 16px;
+            background: #E7E7EA;
+            border-radius: 2px;
+
+            &:hover,
+            &:focus {
+              background: #E8C5ED;
+              border-radius: 2px;
+            }
+
+            &:checked {
+              background: url("../../assets/img/checkbox-tick.svg") #FDFDFD no-repeat center!important;
+              background-size: 13px;
+            }
+          }
+        }
+      }
+    }
+
+    & .group-plans {
+      display: flex;
+      justify-content: space-between;
+      
+      & .plans {
+        &-selection,
+        &-selection-btn {
+          &:hover,
+          &:active,
+          &:focus {
+            border: 1px solid #e7e7ea;
+            outline: none;
+          }
+        }
+
+        &-selection {
+          background: #E7E7EA;
+
+          @media (max-width: 360px) {
+            padding: 0 10px;
+          }
+
+          &.uk-button:not(:disabled) {
+            cursor: unset;
+          }
+
+          &-btn {
+            display: flex;
+            height: 100%;
+            padding: 4px;
+            background: #E7E7EA;
+
+            &-arrow {
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              width: 32px;
+              height: 32px;
+              background: #FDFDFD;
+              border-radius: 2px;
+
+              &-icon {
+                width: 16px;
+                height: 14px;
+                background: url("../../assets/img/select.svg") #FDFDFD no-repeat center;
+              }
+            }
+          }
+        }
+
+        &-list {
+          padding: 0;
+
+          &-item-link {
+            padding: 10px 20px;
+            color: #616069;
+
+            &:hover {
+              background: #F4F2F6;
+            }
+          }
+        }
+      }
+
+      & .priority {
+        margin-left: 38px;
+        display: flex;
+        align-items: center;
+        border: 4px solid #E7E7EA;
+        border-radius: 2px;
+
+        & .major,
+        & .minor {
+          padding: 0;
+          width: 78px;
+          height: 32px;
+          text-align: center;
+          font-size: 16px;
+          line-height: 19px;
+          font-weight: 500;
+
+          &:hover {
+            background: #E8C5ED;
+            border-radius: 2px 0 0 2px;
+          }
+
+          &:focus {
+            background: #484B98;
+            opacity: 0.2;
+            border-radius: 0 2px 2px 0;
+          }
+
+          &:active {
+            color: #FDFDFD;
+            background: #484B98;
+            border-radius: 2px 0 0 2px;
+          }
+        }
+
+        & .major {
+          margin-right: 0;
+          background: #FDF1FF;
+          border-radius: 2px 0 0 2px;
+        }
+
+        & .minor {
+          background: #FDFDFD;
+          border-radius: 0 2px 2px 0;
+        }
+      }
+      
+      @media (max-width: 1050px) {
+        flex-direction: column;
+
+        & .priority {
+          margin-top: 20px;
+          margin-left: 0;
+        }
+      }
+    }
+
+    & .search {
+      width: 360px;
+
+      @media (max-width: 834px) {
+        width: 220px;
+      }
+
+      & .uk-search-icon {
+        color: #E7E7EA;
+      }
+
+      & .uk-search-input:hover ~ .uk-search-icon {
+        display: none;
+      }
+
+      & .uk-search-input {
+        border-bottom: 1px solid #E7E7EA;
+        border-top: none;
+        border-left: none;
+        border-right: none;
+        font-size: 16px;
+        line-height: 19px;
+        font-weight: 500;
+
+        &::placeholder {
+          color: #E7E7EA;
+        }
+      }
+
+      &:focus {
+        & .uk-search-icon {
+          display: none;
+        }
+      }
+    }
+
+    @media (max-width: 767px) {
+      flex-direction: column;
+
+      & .filters-checkbox {
+        margin-top: 28px;
+        order: 2;
+      }
+
+      & .group-plans {
+        margin-top: 32px;
+        flex-direction: initial;
+        order: 3;
+
+        & .priority {
+          margin-top: 0;
+          margin-left: 18px;
+          width: 140px;
+        }
+      }
+
+      & .search {
+        order: 1;
+        width: 100%;
+      }
+    }
+  }
+}

@@ -1,0 +1,35 @@
+@import "node_modules/reset-css/sass/reset.scss";
+@import "node_modules/bootstrap/scss/bootstrap.scss";
+@import "node_modules/slick-carousel/slick/slick.scss";
+@import "node_modules/slick-carousel/slick/slick-theme.scss";
+@import "./header.scss";
+@import "./filters.scss";
+@import "./cards.scss";
+@import "./footer.scss";
+
+:root {
+  --font-family-sans-serif: 'Maven Pro', sans-serif;
+}
+
+body {
+  overflow-x: hidden;
+  font-family: 'Maven Pro', sans-serif;
+
+  p {
+    margin-bottom: 0;
+  }
+
+  & .container {
+    max-width: 1170px;
+    margin: 0 auto;
+    padding: 0 15px;
+  }
+
+  & .uk-button {
+    cursor: unset;
+  }
+}
+
+* {
+  cursor: url('../../assets/img/cursor.svg'), auto;
+}
